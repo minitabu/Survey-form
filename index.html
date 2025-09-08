@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>アンケートフォーム</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+  <div class="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md">
+    <h1 class="text-2xl font-bold mb-6 text-center">アンケートフォーム</h1>
+
+    <!-- FormspreeのURLに置き換えてください -->
+    <form action="https://formspree.io/f/mzzaeowr" method="POST" class="space-y-4">
+      
+      <!-- 本名 -->
+      <div>
+        <label for="real_name" class="block text-sm font-medium text-gray-700">本名</label>
+        <input type="text" id="real_name" name="real_name" required 
+               class="mt-1 block w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500">
+      </div>
+
+      <!-- オープンチャットで使う名前 -->
+      <div>
+        <label for="chat_name" class="block text-sm font-medium text-gray-700">オープンチャットで使う名前</label>
+        <input type="text" id="chat_name" name="chat_name" required 
+               class="mt-1 block w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500">
+      </div>
+
+      <!-- ご意見・ご感想 -->
+      <div>
+        <label for="feedback" class="block text-sm font-medium text-gray-700">ご意見・ご感想</label>
+        <textarea id="feedback" name="feedback" rows="4"
+                  class="mt-1 block w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"></textarea>
+      </div>
+
+      <!-- 送信ボタン -->
+      <button type="submit" 
+              class="w-full bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700 transition">
+        送信
+      </button>
+    </form>
+  </div>
+
+</body>
+</html>
